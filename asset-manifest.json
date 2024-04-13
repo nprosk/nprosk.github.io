@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/static/css/main.97db7a90.css",
-    "main.js": "/static/js/main.c917584f.js",
+    "main.js": "/static/js/main.05f53d93.js",
     "static/js/453.253ccfac.chunk.js": "/static/js/453.253ccfac.chunk.js",
     "static/media/Sedan-Regular.ttf": "/static/media/Sedan-Regular.d7fc4427c1781412445c.ttf",
     "index.html": "/index.html",
     "main.97db7a90.css.map": "/static/css/main.97db7a90.css.map",
-    "main.c917584f.js.map": "/static/js/main.c917584f.js.map",
+    "main.05f53d93.js.map": "/static/js/main.05f53d93.js.map",
     "453.253ccfac.chunk.js.map": "/static/js/453.253ccfac.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.97db7a90.css",
-    "static/js/main.c917584f.js"
+    "static/js/main.05f53d93.js"
   ]
 }
