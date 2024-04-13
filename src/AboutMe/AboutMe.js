@@ -1,29 +1,17 @@
-import { Box, Icon, Text } from "@chakra-ui/react";
+import { Box, Text } from "@chakra-ui/react";
 import { MdOutlineKeyboardArrowDown, MdOutlineKeyboardArrowUp } from "react-icons/md";
-import scrollToElement from "../Utils/ScrollToElement";
+import ScrollToElementBtn from "../Utils/ScrollToElementBtn";
 
 export default function AboutMe() {
   return (
     <>
-      <Box w={"100%"} align="center" my={8}>
-        <Icon
-          as={MdOutlineKeyboardArrowUp}
-          boxSize={8}
-          onClick={() => scrollToElement("projects")}
-        />
-      </Box>
+    <ScrollToElementBtn scrollTo={"projects"} icon={MdOutlineKeyboardArrowUp}/>
       <Box w={"100%"} align="center">
         <Text fontSize={30} as={"b"}>
           Who am I?
         </Text>
       </Box>
-      <Box w={"100%"} align="center" my={8}>
-        <Icon
-          as={MdOutlineKeyboardArrowDown}
-          boxSize={8}
-          onClick={() => scrollToElement("about-me")}
-        />
-      </Box>
+      <ScrollToElementBtn scrollTo={"about-me"} icon={MdOutlineKeyboardArrowDown}/>
     </>
   );
 }

@@ -1,8 +1,8 @@
 import React from "react";
-import { Box, Container, Icon, Tab, TabList, TabPanels, Tabs, Text, useColorMode } from "@chakra-ui/react";
+import { Container, Tab, TabList, TabPanels, Tabs, Text, useColorMode } from "@chakra-ui/react";
 import ProjectCard from "./ProjectCard";
 import { MdOutlineKeyboardArrowDown, MdOutlineKeyboardArrowUp } from "react-icons/md";
-import scrollToElement from "../Utils/ScrollToElement";
+import ScrollToElementBtn from "../Utils/ScrollToElementBtn";
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = React.useState(0);
@@ -42,9 +42,7 @@ const Projects = () => {
 
   return (
     <>
-    <Box w={'100%'} align='center' my={8}>
-      <Icon as={MdOutlineKeyboardArrowUp} boxSize={8} onClick={() => scrollToElement('header')} />
-    </Box>
+    <ScrollToElementBtn scrollTo='header' icon={MdOutlineKeyboardArrowUp} />
     <Container maxW="xl" align='center'>
       <Text fontSize="3xl" mb="4">Projects</Text>
       <Tabs align='center' variant='soft-rounded' colorScheme="gray" onChange={(index) => (setSelectedProject(Number(index)))}>
@@ -56,9 +54,7 @@ const Projects = () => {
         </TabPanels>
       </Tabs>
     </Container>
-    <Box w={'100%'} align='center' my={8}>
-      <Icon as={MdOutlineKeyboardArrowDown} boxSize={8} onClick={() => scrollToElement('about-me')} />
-    </Box>
+    <ScrollToElementBtn scrollTo='about-me' icon={MdOutlineKeyboardArrowDown} />
     </>
   );
 };

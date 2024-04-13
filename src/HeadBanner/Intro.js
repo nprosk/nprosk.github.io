@@ -1,7 +1,6 @@
 import {
   Box,
   Button,
-  Icon,
   Image,
   LightMode,
   Link,
@@ -11,26 +10,27 @@ import {
 import SocialLinks from "./SocialLinks";
 import scrollToElement from "../Utils/ScrollToElement";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
+import ScrollToElementBtn from "../Utils/ScrollToElementBtn";
 
 export default function Intro() {
   return (
     <>
       <Stack
-        direction={"row"}
+        direction={{base: "column", sm: "row"}}
         spacing={4}
-        align="center"
+        align={{base: "center", sm: "flex-start"}}
         justify="center"
         mt={20}
       >
         <Image
           objectFit="cover"
           borderRadius="full"
-          maxW={{ base: "100%", sm: "300px" }}
+          maxW={{ base: "50%", sm: "200px", md: "300px", lg: "400px"}}
           src="pic_of_me.JPG"
           alt="Me in an esports jersey"
         />
 
-        <Stack ml={3} align="center">
+        <Stack ml={{ base: 0, sm: 3 }} align={{ base: "center", sm: "start" }}>
           <Text fontSize="3xl" as="b">
             Nicolas Proskauer Valerio
           </Text>
@@ -74,13 +74,7 @@ export default function Intro() {
             </Button>
           </LightMode>
         </Box>
-        <Box w={"100%"} align="center" my={8}>
-          <Icon
-            as={MdOutlineKeyboardArrowDown}
-            boxSize={8}
-            onClick={() => scrollToElement("projects")}
-          />
-        </Box>
+        <ScrollToElementBtn scrollTo="projects" icon={MdOutlineKeyboardArrowDown} />
       </Box>
     </>
   );
