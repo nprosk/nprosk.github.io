@@ -1,38 +1,49 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: 'Sedan';
+  src: url('../public/Sedan/Sedan-Regular.ttf');
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.use-sedan {
+  font-family: 'Sedan', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.social-icons {
+  transition: transform 0.4s;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.social-icons:hover {
+  transform: translateY(-4px);
+  transition: transform 0.4s;
 }
 
-.App-link {
-  color: #61dafb;
+.onyx {
+  background-color: #303633;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.aquamarine {
+  background-color: #8BE8CB;
+}
+
+.cadet-gray {
+  background-color: #7EA2AA;
+}
+
+.cool-gray {
+  background-color: #888DA7;
+}
+
+.onyx-text {
+  color: #303633;
+}
+
+.aquamarine-text {
+  color: #8BE8CB;
+}
+
+.cadet-gray-text {
+  color: #7EA2AA;
+}
+
+.cool-gray-text {
+  color: #888DA7;
 }
