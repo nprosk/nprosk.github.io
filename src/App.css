@@ -7,6 +7,12 @@
   font-family: 'Sedan', sans-serif;
 }
 
+body {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
 .social-icons {
   transition: transform 0.4s;
 }
@@ -46,4 +52,25 @@
 
 .cool-gray-text {
   color: #888DA7;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.projects {
+  position: absolute;
+  top: 100vh;
+  width: 100%;
+  height: 100vh;
+}
+
+.about-me {
+  position: absolute;
+  top: 200vh;
+  width: 100%;
+  height: 100vh;
 }

@@ -1,15 +1,31 @@
-import './App.css';
-import { Box, ChakraProvider } from '@chakra-ui/react';
-import { AboutMe } from './HeadBanner/AboutMe';
+import "./App.css";
+import {
+  Box,
+  ChakraProvider,
+  extendTheme,
+} from "@chakra-ui/react";
+import ColorMode from "./ColorMode";
+import Projects from "./Projects/Projects";
+import Intro from "./HeadBanner/Intro";
+import AboutMe from "./AboutMe/AboutMe";
 
 function App() {
-  document.body.style.backgroundColor = '#7EA2AA';
+  const theme = extendTheme({ colorscheme: "gray" });
 
   return (
-    <ChakraProvider>
-      <Box className='use-sedan'>
-        <AboutMe />
+    <ChakraProvider theme={theme}>
+      <Box className="use-sedan">
+        <Box id="header" className="header">
+          <Intro />
+        </Box>
+        <Box id="projects" className="projects">
+          <Projects />
+        </Box>
+        <Box id="about-me" className="about-me">
+          <AboutMe/>
+        </Box>
       </Box>
+      <ColorMode />
     </ChakraProvider>
   );
 }
