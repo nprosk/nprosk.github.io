@@ -73,3 +73,17 @@ body {
   width: 100%;
   height: 100vh;
 }
+
+.work-experience {
+  position: absolute;
+  top: 300vh;
+  width: 100%;
+  height: 100vh;
+}
+
+.rocket-league {
+  position: absolute;
+  top: 400vh;
+  width: 100%;
+  height: 100vh;
+}

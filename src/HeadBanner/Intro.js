@@ -9,14 +9,12 @@ import {
 } from "@chakra-ui/react";
 import SocialLinks from "./SocialLinks";
 import scrollToElement from "../Utils/ScrollToElement";
-import { MdOutlineKeyboardArrowDown } from "react-icons/md";
-import ScrollToElementBtn from "../Utils/ScrollToElementBtn";
 
 export default function Intro() {
   return (
     <>
       <Stack
-        direction={{base: "column", sm: "row"}}
+        direction={{base: "column", md: "row"}}
         spacing={4}
         align={{base: "center", sm: "flex-start"}}
         justify="center"
@@ -25,17 +23,17 @@ export default function Intro() {
         <Image
           objectFit="cover"
           borderRadius="full"
-          maxW={{ base: "50%", sm: "200px", md: "300px", lg: "400px"}}
+          maxW={{ base: "40%", sm: "200px", md: "300px"}}
           src="pic_of_me.JPG"
           alt="Me in an esports jersey"
         />
 
-        <Stack ml={{ base: 0, sm: 3 }} align={{ base: "center", sm: "start" }}>
+        <Stack align={'center'}>
           <Text fontSize="3xl" as="b">
-            Nicolas Proskauer Valerio
+            Nicol&#225;s Proskauer Valerio
           </Text>
 
-          <Text py="2" maxW={{ base: "100&", sm: "400px" }}>
+          <Text py="2" maxW={{ base: "100%", sm: "200px", 'md': "300px", 'lg': "400px"}}>
             Software Engineer with a passion for esports and gaming. I am a
             rising senior attending Northeastern University.
           </Text>
@@ -54,7 +52,7 @@ export default function Intro() {
           </Link>
         </Stack>
       </Stack>
-      <Box w="100%" align="center" mt={20}>
+      <Box w="100%" align="center" mt={{base: 5, sm: 10, md: 20}}>
         <Box>
           <LightMode>
             <Button
@@ -69,12 +67,12 @@ export default function Intro() {
               onClick={() => scrollToElement("about-me")}
               mx={8}
               size={"lg"}
+              className="social-icons"
             >
               About Me
             </Button>
           </LightMode>
         </Box>
-        <ScrollToElementBtn scrollTo="projects" icon={MdOutlineKeyboardArrowDown} />
       </Box>
     </>
   );

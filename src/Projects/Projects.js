@@ -1,8 +1,6 @@
 import React from "react";
 import { Container, Tab, TabList, TabPanels, Tabs, Text, useColorMode } from "@chakra-ui/react";
 import ProjectCard from "./ProjectCard";
-import { MdOutlineKeyboardArrowDown, MdOutlineKeyboardArrowUp } from "react-icons/md";
-import ScrollToElementBtn from "../Utils/ScrollToElementBtn";
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = React.useState(0);
@@ -18,13 +16,17 @@ const Projects = () => {
       demoLink: "https://spring24-project-s24-group-506.onrender.com/",
     },
     {
-      title: "Not CoveyArcade",
+      title: "Sportlight",
       description:
-        "something else",
+        "Created a sport highlight website with user management functionality using Next.js, Bootstrap, Mongoose, and RESTful APIs.",
       githubLink:
-        "https://github.com/neu-cs4530/spring24-project-s24-group-506",
-      demoLink: "https://spring24-project-s24-group-506.onrender.com/",
+        "https://github.com/shanejpark/sportlight",
     },
+    {
+      title: "Culinary Crafting",
+      description: "A",
+      githubLink: "https://github.com/RaeAlbus/Culinary-Crafting",
+    }
   ];
 
   const projectTabsMapFunction = (project, index) => {
@@ -42,9 +44,8 @@ const Projects = () => {
 
   return (
     <>
-    <ScrollToElementBtn scrollTo='header' icon={MdOutlineKeyboardArrowUp} />
-    <Container maxW="xl" align='center'>
-      <Text fontSize="3xl" mb="4">Projects</Text>
+    <Container maxW="xl" align='center' my={'20vh'}>
+      <Text fontSize={{base: '2xl', md: '3xl'}} mb="4">Projects</Text>
       <Tabs align='center' variant='soft-rounded' colorScheme="gray" onChange={(index) => (setSelectedProject(Number(index)))}>
         <TabList>
           {projects.map(projectTabsMapFunction)}
@@ -54,7 +55,6 @@ const Projects = () => {
         </TabPanels>
       </Tabs>
     </Container>
-    <ScrollToElementBtn scrollTo='about-me' icon={MdOutlineKeyboardArrowDown} />
     </>
   );
 };
