@@ -19,7 +19,7 @@ const Projects = () => {
     {
       title: "CoveyArcade",
       description:
-        "The Arcade in Covey.Town introduces a dynamic and engaging space within the platform. Users can take breaks during virtual meetings to enjoy these games, fostering team bonding and providing a recreational outlet. The addition of a ticket booth enhances the experience, allowing users to earn virtual tickets by winning games. These tickets can be exchanged at the ticket booth for a variety of cosmetic items that can be equipped and shown off to others.",
+        `Integrated new types and game areas into Covey.town's codebase, using objects in the tilemap editable via "Tiled". These areas are dynamically generated upon map loading using Phaser. Players can join and play games using React. Utilized event handlers in React like keypress and onClick for game functionality, and CSS for styling the actual games themselves. Most of the UI elements in the TicketBooth use Chakra/UI components.`,
       githubLink:
         "https://github.com/neu-cs4530/spring24-project-s24-group-506",
       demoLink: "https://spring24-project-s24-group-506.onrender.com/",
@@ -31,9 +31,10 @@ const Projects = () => {
       githubLink: "https://github.com/shanejpark/sportlight",
     },
     {
-      title: "Culinary Crafting",
-      description: "A",
-      githubLink: "https://github.com/RaeAlbus/Culinary-Crafting",
+      title: "Starfield Simulation",
+      description: "Used p5.js to create a starfield simulation.",
+      githubLink: "https://github.com/nprosk/starfield_simulation",
+      demoLink: 'https://nprosk.github.io/starfield_simulation/'
     },
   ];
 

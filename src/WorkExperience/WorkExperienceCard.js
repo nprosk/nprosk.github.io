@@ -16,7 +16,7 @@ export default function WorkExperienceCard({ company, position, duration, descri
       <VStack spacing={4} align="center">
         <Image src={logo} alt={`${company} logo`} objectFit={'cover'} maxW={"400px"} maxH={"100px"}/>
         <Heading as="h3" size="md" textAlign="center">
-          {position} at {company}
+          {position}, {company}
         </Heading>
         <Text fontSize="sm" color="gray.500" textAlign="center">
           {duration}

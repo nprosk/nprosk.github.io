@@ -22,11 +22,11 @@ function App() {
         <Box id="header" className="header">
           <Intro />
         </Box>
-        <Box id="projects" className="projects">
-          <Projects />
-        </Box>
         <Box id="about-me" className="about-me">
           <AboutMe/>
+        </Box>
+        <Box id="projects" className="projects">
+          <Projects />
         </Box>
         <Box id="work-experience" className="work-experience">
           <WorkExperience/>
@@ -35,12 +35,11 @@ function App() {
           <RocketLeague/>
         </Box>
       </Box>
-      <ScrollToElementBtn scrollTo='projects' icon={MdOutlineKeyboardArrowDown} position="90vh" />
       <ScrollToElementBtn scrollTo='header' icon={MdOutlineKeyboardArrowUp} position="105vh" />
-      <ScrollToElementBtn scrollTo='about-me' icon={MdOutlineKeyboardArrowDown} position="190vh" />
-      <ScrollToElementBtn scrollTo='projects' icon={MdOutlineKeyboardArrowUp} position="205vh" />
+      <ScrollToElementBtn scrollTo='projects' icon={MdOutlineKeyboardArrowDown} position="190vh" />
+      <ScrollToElementBtn scrollTo='about-me' icon={MdOutlineKeyboardArrowUp} position="205vh" />
       <ScrollToElementBtn scrollTo='work-experience' icon={MdOutlineKeyboardArrowDown} position="290vh" />
-      <ScrollToElementBtn scrollTo='about-me' icon={MdOutlineKeyboardArrowUp} position="305vh" />
+      <ScrollToElementBtn scrollTo='projects' icon={MdOutlineKeyboardArrowUp} position="305vh" />
       <ScrollToElementBtn scrollTo='rocket-league' icon={MdOutlineKeyboardArrowDown} position="390vh" />
       <ScrollToElementBtn scrollTo='work-experience' icon={MdOutlineKeyboardArrowUp} position="405vh" />
       <ColorMode />
