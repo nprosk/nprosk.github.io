@@ -18,8 +18,12 @@ const Projects = () => {
   const projects = [
     {
       title: "CoveyArcade",
-      description:
-        `Integrated new types and game areas into Covey.town's codebase, using objects in the tilemap editable via "Tiled". These areas are dynamically generated upon map loading using Phaser. Players can join and play games using React. Utilized event handlers in React like keypress and onClick for game functionality, and CSS for styling the actual games themselves. Most of the UI elements in the TicketBooth use Chakra/UI components.`,
+      description: `Extended Covey.Town with an arcade area featuring real-time Pong and Target Shooting, 
+      using WebSockets to communicate between the user and server, 
+      rewarding winning players with tickets redeemable for cosmetics in the virtual ticket booth.
+      Integrated new types and game areas into Covey.town's codebase.
+      Players can join and play games using React, 
+      used plain CSS for styling the actual games themselves. Most of the UI elements in the TicketBooth use Chakra/UI components.`,
       githubLink:
         "https://github.com/neu-cs4530/spring24-project-s24-group-506",
       demoLink: "https://spring24-project-s24-group-506.onrender.com/",
@@ -34,7 +38,7 @@ const Projects = () => {
       title: "Starfield Simulation",
       description: "Used p5.js to create a starfield simulation.",
       githubLink: "https://github.com/nprosk/starfield_simulation",
-      demoLink: 'https://nprosk.github.io/starfield_simulation/'
+      demoLink: "https://nprosk.github.io/starfield_simulation/",
     },
   ];
 
@@ -60,7 +64,7 @@ const Projects = () => {
 
   return (
     <>
-      <Container maxW="xl" align="center" my={{base: "12vh", md: "20vh"}}>
+      <Container maxW="xl" align="center" my={{ base: "12vh", md: "20vh" }}>
         <Text fontSize={{ base: "2xl", md: "3xl" }} mb="4">
           Projects
         </Text>
@@ -73,7 +77,9 @@ const Projects = () => {
           <TabList>{projects.map(projectTabsMapFunction)}</TabList>
           <TabPanels>{projects.map(projectBodyMapFunction)}</TabPanels>
         </Tabs>
-        <Link href="https://github.com/nprosk" isExternal>See more</Link>
+        <Link href="https://github.com/nprosk" isExternal>
+          See more
+        </Link>
       </Container>
     </>
   );

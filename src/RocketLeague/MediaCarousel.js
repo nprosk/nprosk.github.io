@@ -18,21 +18,21 @@ export default function MediaCarousel({ mediaItems }) {
   return (
     <VStack spacing={2} align="center">
       {mediaItems[currentIndex].type === "image" ? (
-        <Image src={mediaItems[currentIndex].url} alt={mediaItems[currentIndex].alt} maxH={'400px'} objectFit="cover" />
+        <Image src={mediaItems[currentIndex].url} alt={mediaItems[currentIndex].alt} maxH={'350px'} objectFit="cover" />
       ) : (
         <Box maxH="400px">
-          <video key={currentIndex} controls style={{ maxHeight: "400px", width: "100%" }}>
+          <video key={currentIndex} controls style={{ maxHeight: "350px", width: "100%" }}>
             <source src={mediaItems[currentIndex].url} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </Box>
       )}
-      <Text>{mediaItems[currentIndex].caption}</Text>
+      <Text my={2}>{mediaItems[currentIndex].caption}</Text>
       <HStack spacing={4}>
-        <Button onClick={handlePrev}>
-          <Icon as={ChevronLeftIcon} boxSize={6} />
+        <Button onClick={handlePrev} className="social-icons">
+          <Icon as={ChevronLeftIcon} boxSize={6}/>
         </Button>
-        <Button onClick={handleNext}>
+        <Button onClick={handleNext} className="social-icons">
           <Icon as={ChevronRightIcon} boxSize={6} />
         </Button>
       </HStack>
