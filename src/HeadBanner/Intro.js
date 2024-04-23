@@ -12,6 +12,7 @@ import {
   TabList,
   Tabs,
   Text,
+  useColorMode,
 } from "@chakra-ui/react";
 import SocialLinks from "./SocialLinks";
 import scrollToElement from "../Utils/ScrollToElement";
@@ -30,6 +31,8 @@ import { SiChakraui, SiTypescript } from "react-icons/si";
 import { FaUnity } from "react-icons/fa6";
 
 export default function Intro() {
+  const { colorMode, toggleColorMode } = useColorMode();
+
   const tabs = [
     {
       title: "About Me",
@@ -48,6 +51,13 @@ export default function Intro() {
       onClick: () => scrollToElement("rocket-league"),
     },
   ];
+
+  const resumeBGColor = {
+    light: "black",
+    dark: "gray.100",
+  };
+
+  const color = colorMode === "light" ? "white" : "black";
 
   return (
     <Box>
@@ -71,16 +81,11 @@ export default function Intro() {
             Nicol&#225;s Proskauer Valerio
           </Text>
 
-          <Text maxW={{ base: "100%", sm: "200px", md: "300px", lg: "400px" }}>
+          <Text maxW={{ base: "100%", sm: "200px", md: "300px", lg: "400px" }} pb={6} textAlign={'center'}>
             Computer Science at Northeastern
-          </Text>
-          <Text maxW={{ base: "100%", sm: "200px", md: "300px", lg: "400px" }}>
+            <br />
             Software Concentration with a minor in Game Design
-          </Text>
-          <Text
-            pb="2"
-            maxW={{ base: "100%", sm: "200px", md: "300px", lg: "400px" }}
-          >
+            <br />
             Rising Senior
           </Text>
           <SocialLinks />
@@ -90,28 +95,41 @@ export default function Intro() {
             download="./Nicolas_Proskauer_Valerio_Resume.pdf"
             className="social-icons"
           >
-            <LightMode>
-              <Button size={"lg"} width={"200px"}>
-                <Text>Resume</Text>
-              </Button>
-            </LightMode>
+            <Box
+              as="button"
+              height="40px"
+              w={'140px'}
+              transition="all 0.2s cubic-bezier(.08,.52,.52,1)"
+              px="8px"  
+              borderRadius="20px"
+              fontSize="20px"
+              fontWeight="semibold"
+              bg={resumeBGColor[colorMode]}
+              color={color}
+              _focus={{
+                boxShadow:
+                  "0 0 1px 2px rgba(88, 144, 255, .75), 0 1px 1px rgba(0, 0, 0, .15)",
+              }}
+            >
+              Resume
+            </Box>
           </Link>
         </Stack>
       </Stack>
       <Container alignItems={"center"} my={6}>
         <HStack width={"100vw"}>
-          <Icon as={FaReact} w={10} h={10} className="social-icons" />
-          <Icon as={TbBrandNextjs} w={10} h={10} className="social-icons" />
-          <Icon as={FaJava} w={10} h={10} className="social-icons" />
-          <Icon as={FaPython} w={10} h={10} className="social-icons" />
-          <Icon as={IoLogoJavascript} w={10} h={10} className="social-icons" />
-          <Icon as={SiTypescript} w={10} h={10} className="social-icons" />
-          <Icon as={FaHtml5} w={10} h={10} className="social-icons" />
-          <Icon as={FaCss3} w={10} h={10} className="social-icons" />
-          <Icon as={SiChakraui} w={10} h={10} className="social-icons" />
-          <Icon as={FaBootstrap} w={10} h={10} className="social-icons" />
-          <Icon as={FaNodeJs} w={10} h={10} className="social-icons" />
-          <Icon as={FaUnity} w={10} h={10} className="social-icons" />
+          <Icon as={FaReact} w={{base: 5, md: 10}} h={{base: 5, md: 10}} className="social-icons" />
+          <Icon as={TbBrandNextjs} w={{base: 5, md: 10}} h={{base: 5, md: 10}} className="social-icons" />
+          <Icon as={FaJava} w={{base: 5, md: 10}} h={{base: 5, md: 10}} className="social-icons" />
+          <Icon as={FaPython} w={{base: 5, md: 10}} h={{base: 5, md: 10}} className="social-icons" />
+          <Icon as={IoLogoJavascript} w={{base: 5, md: 10}} h={{base: 5, md: 10}} className="social-icons" />
+          <Icon as={SiTypescript} w={{base: 5, md: 10}} h={{base: 5, md: 10}} className="social-icons" />
+          <Icon as={FaHtml5} w={{base: 5, md: 10}} h={{base: 5, md: 10}} className="social-icons" />
+          <Icon as={FaCss3} w={{base: 5, md: 10}} h={{base: 5, md: 10}} className="social-icons" />
+          <Icon as={SiChakraui} w={{base: 5, md: 10}} h={{base: 5, md: 10}} className="social-icons" />
+          <Icon as={FaBootstrap} w={{base: 5, md: 10}} h={{base: 5, md: 10}} className="social-icons" />
+          <Icon as={FaNodeJs} w={{base: 5, md: 10}} h={{base: 5, md: 10}} className="social-icons" />
+          <Icon as={FaUnity} w={{base: 5, md: 10}} h={{base: 5, md: 10}} className="social-icons" />
         </HStack>
       </Container>
       <Box w="100%" align="center" mt={{ base: 5, sm: 10, md: 20 }}>
