@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  Box,
   Container,
   Link,
   Tab,
@@ -14,6 +15,13 @@ import ProjectCard from "./ProjectCard";
 const Projects = () => {
   const [selectedProject, setSelectedProject] = React.useState(0);
   const { colorMode } = useColorMode();
+
+  const SeeMoreBGColor = {
+    light: "black",
+    dark: "gray.100",
+  };
+
+  const color = colorMode === "light" ? "white" : "black";
 
   const projects = [
     {
@@ -77,8 +85,28 @@ const Projects = () => {
           <TabList>{projects.map(projectTabsMapFunction)}</TabList>
           <TabPanels>{projects.map(projectBodyMapFunction)}</TabPanels>
         </Tabs>
-        <Link href="https://github.com/nprosk" isExternal>
-          See more
+        <Link
+          href="https://github.com/stars/nprosk/lists/projects"
+          isExternal
+        >
+          <Box
+            as="button"
+            height="40px"
+            w={"140px"}
+            transition="all 0.2s cubic-bezier(.08,.52,.52,1)"
+            px="8px"
+            borderRadius="20px"
+            fontSize="20px"
+            fontWeight="semibold"
+            bg={SeeMoreBGColor[colorMode]}
+            color={color}
+            _focus={{
+              boxShadow:
+                "0 0 1px 2px rgba(88, 144, 255, .75), 0 1px 1px rgba(0, 0, 0, .15)",
+            }}
+          >
+            See More
+          </Box>
         </Link>
       </Container>
     </>

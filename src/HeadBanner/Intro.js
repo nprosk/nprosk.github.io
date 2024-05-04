@@ -1,6 +1,5 @@
 import {
   Box,
-  Button,
   Container,
   HStack,
   Icon,
@@ -31,7 +30,7 @@ import { SiChakraui, SiTypescript } from "react-icons/si";
 import { FaUnity } from "react-icons/fa6";
 
 export default function Intro() {
-  const { colorMode, toggleColorMode } = useColorMode();
+  const { colorMode } = useColorMode();
 
   const tabs = [
     {
