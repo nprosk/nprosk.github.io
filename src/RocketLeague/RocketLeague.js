@@ -28,6 +28,18 @@ export default function RocketLeague() {
       caption: "Individual player shot of me during the Boost on the Beach LAN tournament in Myrtle Beach, SC",
     },
     {
+      type: "image",
+      url: "./RocketLeague/pic5.jpg",
+      alt: "Individual Picture",
+      caption: "Individual picture during media day Fall 2024",
+    },
+    {
+      type: "image",
+      url: "./RocketLeague/pic6.jpg",
+      alt: "Team Picture",
+      caption: "Team picture during media day Fall 2024",
+    },
+    {
       type: "video",
       url: "./RocketLeague/vid1.mp4",
       caption: "Team passing play during a tournament match",
@@ -37,6 +49,11 @@ export default function RocketLeague() {
       url: "./RocketLeague/vid2.mp4",
       caption: "Beautiful assist to a teammate during a tournament match",
     },
+    {
+      type: "video",
+      url: "./RocketLeague/vid3.mp4",
+      caption: "Highlights from a couple of series during ESC Regular Season Fall 2024",
+    }
   ];
 
   return (

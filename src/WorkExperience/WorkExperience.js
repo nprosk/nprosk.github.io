@@ -1,5 +1,6 @@
-import { Box, Text } from "@chakra-ui/react";
+import { Box, position, Text } from "@chakra-ui/react";
 import WorkExperienceCarousel from "./WorkExperienceCarousel";
+import { complex } from "framer-motion";
 
 export default function WorkExperience() {
   const workExperience = [
@@ -29,6 +30,24 @@ export default function WorkExperience() {
       \nMaintained a clean and organized store, restocking products and cleaning the store as needed.
       \nOperated the cash register and handled cash and card transactions.`,
       logo: "./CompanyLogos/CGX_logo.png",
+    },
+    {
+      company: "Evertec",
+      position: "Products and Innovation Intern",
+      duration: "June 2024 - July 2024",
+      description: `Conducted audit and fact-finding on RiskCenter 360 cost structure.
+      \nCollaborated with multiple departments across several Latin American locations.
+      \nConstructed a P&L analysis for RiskCenter 360 product in Microsoft Excel and briefed management team on findings.`,
+      logo: "./CompanyLogos/Evertec_logo.png",
+    },
+    {
+      company: "Northeastern University ITS",
+      position: "Quality Assurance Co-op",
+      duration: "July 2024 - December 2024",
+      description: `Automated functional, load, and stress testing of APIs using JMeter, executing JDBC requests and utilizing Groovy scripting.
+      \nDeveloped and implemented test cases to validate acceptance criteria for Salesforce workflows and flows.
+      \nValidated accurate data transfer between databases like Banner and Snowflake and applications such as Salesforce and OutSystems, ensuring data integrity and proper system integration across platforms.`,
+      logo: "./CompanyLogos/NortheasternUniversity.png",
     }
   ];
 
