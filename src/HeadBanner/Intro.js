@@ -71,7 +71,7 @@ export default function Intro() {
           objectFit="cover"
           borderRadius="full"
           maxW={{ base: "40%", sm: "200px", md: "300px" }}
-          src="pic_of_me.PNG"
+          src="pic_of_me.png"
           alt="Me in an esports jersey"
         />
 
